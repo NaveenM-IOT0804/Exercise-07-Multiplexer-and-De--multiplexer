@@ -47,24 +47,69 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
+
+
+Multiplexer:
+
+A multiplexer is a combinational type of digital circuits that are used to transfer one of the available input lines to the single output and, which input has to be transferred to the output it will be decided by the state(logic 0 or logic 1) of the select line signal. 2:1 Multiplexer is having two inputs, one select line (to select one of the two input) and a single output. 
+
+Demultiplexer:
+
+A demultiplexer is a combinational logic circuit that performs the opposite function as that of a multiplexer. A demultiplexer is alternatively referred to as a demux.
+
+In a demux, we have n output lines, one input line, and m select lines. The relation between the number of output lines and the number of select lines is the same as we saw in a multiplexer. That is, 2^m = n. Depending on the value of the binary number formed by the select lines, any one of the output lines connects to the input line.
+
+The rest of the output lines at this point go to an OFF state. That is, the value of the remaining lines is 0.
+
+In this way, a demultiplexer converts serial data to parallel data and acts as a serial-parallel converter. Moreover, since it connects one data line to multiple data lines and switches between them, a demultiplexer is also known as a data distributor. The general symbol of a demultiplexer is shown in the following image.
 
 
 
 ### PROGRAM 
+```
 /*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Program for Multiplexer and demultiplexer and verify its truth table in quartus using Verilog programming.
+Developed by: Naveen M
+RegisterNumber: 22000748
 */
 
+Multiplexer:
 
 
+module exmux(i0,i1,i2,i3,s0,s1,y);
+input i0,i1,i2,i3,s0,s1;
+output y;
+wire s0c,s1c;
+not(s0c,s0);
+not(s1c,s1);
+wire p,q,r,s;
+and (p,s0c,s1c,i0);
+and (q,s0c,s1,i1);
+and(r,s0,s1c,i2);
+and(s,s0,s1,i3);
+or(y,p,q,r,s);
+endmodule
 
 
+Demultiplexer:
 
+
+module expdemux(y0,y1,y2,y3,s0,s1,i);
+input s0,s1,i;
+output y0,y1,y2,y3;
+wire s0c,s1c;
+nor(s0c,s0);
+nor(s1c,s1);
+and(y0,i,s0c,s1c);
+and(y1,i,s0c,s1);
+and(y2,i,s0,s1c);
+and(y3,i,s0,s1);
+endmodule
+
+```
 ### RTL LOGIC  
 
+Multiplexer:
 
 
 
