@@ -112,22 +112,36 @@ endmodule
 Multiplexer:
 
 
+![mux](https://user-images.githubusercontent.com/117974950/214290582-0ba90d4a-7ded-4cc8-b39f-7f307b408fb8.png)
 
 
+Demultiplexer:
 
+
+![demux](https://user-images.githubusercontent.com/117974950/214290681-91cc2ac5-cafd-487b-ad20-04919f2cabbe.png)
 
 
 ### TIMING DIGRAMS  
 
+![m1](https://user-images.githubusercontent.com/117974950/214290830-c5ef533b-706c-4fc7-80b0-d2bd30fd5a82.png)
 
+![m2](https://user-images.githubusercontent.com/117974950/214290867-719b0257-df8d-462f-9b96-0a5ca2b36378.png)
 
+![m3](https://user-images.githubusercontent.com/117974950/214290892-05119eb9-5168-4e70-8922-d278772405d0.png)
 
+![m4](https://user-images.githubusercontent.com/117974950/214290930-918fbdd3-3c6d-4604-b6cf-2cd4a0d609d4.png)
+
+![demuxwaveform](https://user-images.githubusercontent.com/117974950/214291180-d62d117b-72ef-4727-80d4-b0b2010ecedf.png)
 
 ### TRUTH TABLE 
 
+Multiplexer:
 
+![mtt](https://user-images.githubusercontent.com/117974950/214292615-eeb9399c-28f5-4494-9112-f475678942e8.png)
 
+Demultiplexer:
 
-
+![dmtt](https://user-images.githubusercontent.com/117974950/214292655-b61fafe2-2499-45a7-b0ae-3fc90c0d8e27.png)
 
 ### RESULTS 
+Hence 4x1 Multiplexer and 1x4 Demultiplexer is been implemented and verified using verilog programming and its output are validated.
